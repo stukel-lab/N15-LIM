@@ -37,6 +37,8 @@ KeeperRatio <- 10000
 IterLength <- 10000000
 OutputLength <- IterLength / KeeperRatio
 BurninLength <- IterLength / 100
+
+## Set based on which forward model
 if (Model == "DIAZO.Coastal"){
   jmpLength <- 0.02
 }else if (Model == "DIAZO.Mesohaline") {
@@ -52,24 +54,22 @@ jmpLength15 <- 0.02
 Aa2 <- Aa[11:14,]
 ba2 <- ba[11:14]
 sdba2 <- sdba[11:14]
-d15N0 <- c(0,0,0,0,0,0)
+d15N0 <- c(0, 0, 0, 0, 0, 0)
 
+## Read N15 values from forward model
+upNO315N <- Inputs[8, InputCol]
+Mes15N <- Inputs[9, InputCol]
+Det15N <- Inputs[7, InputCol]
+Doc15N <- Inputs[22, InputCol]
+del15Nknown <- c(upNO315N, Mes15N, Doc15N, Det15N)
 
-upNO315N <- Inputs[8,InputCol]
-Mes15N <- Inputs[9,InputCol]
-Det15N <- Inputs[7,InputCol]
-Doc15N <- Inputs[22,InputCol]
-#NO315N <- Inputs[23,InputCol]
-#del15Nknown <- c(upNO315N,Mes15N,Doc15N,Det15N,NO315N)
-del15Nknown <- c(upNO315N,Mes15N,Doc15N,Det15N)
-
-#L2MN Solution
-test <- lsei(A = Aa2, B = ba2, E = Ae, F = be, G = G, H = h, type=2)
+## L2MN Solution (without N15)
+# Start
+test <- lsei(A = Aa2, B = ba2, E = Ae, F = be, G = G, H = h, type=2) # No N15 here
 X <- test[['X']]
 solNorm <- test[['solutionNorm']]
 lseisol <- as.matrix(X)
 rm(test, X)  # Housekeeping
-
 
 
 #Central Value Solution
@@ -117,7 +117,6 @@ MCMCmatplain <- test2[['X']]
 ##############################
 
 # Use full model solution to initialize the N15 matricies 
-
 MCMCmatmean <- colMeans(MCMCmatplain)
 RN2 <- 0.0036765;
 Eps_Remin <- -1
@@ -127,6 +126,7 @@ Alpha_NH4up <- exp(Eps_NH4up/1000)
 Alpha_Eg <- exp(Eps_Eg/1000)
 Alpha_Remin <- exp(Eps_Remin/1000)
 sdbafactor <- (RN2*Alpha_Remin - RN2)/10
+
 sdba[1] <- sum(MCMCmatmean[c(1,3,10)]) * sdbafactor
 sdba[2] <- sum(MCMCmatmean[c(4,11,18,21,25,32)]) * sdbafactor
 sdba[3] <- sum(MCMCmatmean[c(2,3,4,5,6,7,8)]) * sdbafactor
@@ -137,6 +137,7 @@ sdba[7] <- sum(MCMCmatmean[c(6,17,22,25,26,27,30,34)]) * sdbafactor
 sdba[8] <- sum(MCMCmatmean[c(7,14,19,23,26,28,29,30,31,33)]) * sdbafactor
 sdba[9] <- sum(MCMCmatmean[c(8,15,20,24,27,31,32)]) * sdbafactor
 sdba[10] <- sum(MCMCmatmean[c(1,2,9,33,34)]) * sdbafactor
+
 
 ## Burnin - N15 (iterative process)
 test2 <- xsampleN15(A = Aa, B = ba, E = Ae, F = be, G = G,
