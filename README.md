@@ -3,9 +3,16 @@
 
 This project integrates N15 values into Linear Inverse Models for ecosystem modeling. Below are the actual scripts:
 
-1. [N15 Setup File](https://github.com/tbrycekelly/N15-LIM/blob/master/InverseN15_Setup%20File.ipynb)
-2. [Model Initialization Script](https://github.com/tbrycekelly/N15-LIM/blob/master/RunN15InverseRW.ipynb)
-3. [A Modified MCMC Sampling Algorithm](https://github.com/tbrycekelly/N15-LIM/blob/master/xsampleN15.r)
-4. [With these additional functions](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.ipynb)
+1. [N15 Setup File](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.ipynb): Reads in the spreadsheets and prepares the matricies and vectors used in the LIM. Also loads results from the Forward model for use in the LIM.
+2. [Model Initialization Script](https://github.com/tbrycekelly/N15-LIM/blob/master/RunN15InverseRW.ipynb): Gets the run-time enviroment ready and handles all the bunr-in stages as well as the actual model runs. Saves all results at the end.
+3. [A Modified MCMC Sampling Algorithm](https://github.com/tbrycekelly/N15-LIM/blob/master/xsampleN15.r): Is called by the Model Initialization Script, not meant to be edited from one model to the next. Adapted from Van den Meersche's xsample script.
+4. [With these additional functions](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.ipynb): Includes the function that updates the N15-related equations during the random walk. Also an ideal file for accessory functions.
+
+
 
 In general, the user accessible scripts are available as with jupyter notebook files or as straight R code.
+
+* N15 Setup File: [Notebook](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.ipynb), [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.R), [Matlab](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.m)
+* Model Initialization Script: [Notebook](https://github.com/tbrycekelly/N15-LIM/blob/master/RunN15InverseRW.ipynb), [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/RunN15InverseRW.R)
+* A Modified MCMC Sampling Algorithm: [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/xsampleN15.r)
+* With these additional functions: [Notebook](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.ipynb), [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.R)
