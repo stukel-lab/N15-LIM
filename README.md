@@ -1,5 +1,4 @@
 # N15 LIM
----
 
 This project integrates N15 values into Linear Inverse Models for ecosystem modeling. Below are the actual scripts:
 
@@ -9,10 +8,18 @@ This project integrates N15 values into Linear Inverse Models for ecosystem mode
 4. [With these additional functions](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.ipynb): Includes the function that updates the N15-related equations during the random walk. Also an ideal file for accessory functions.
 
 
+---
+### Files
 
 In general, the user accessible scripts are available as with jupyter notebook files or as straight R code.
 
-* N15 Setup File: [Notebook](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.ipynb), [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.R), [Matlab](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.m)
+* N15 Setup File: [Notebook](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.ipynb), [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.r), [Matlab](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.m)
 * Model Initialization Script: [Notebook](https://github.com/tbrycekelly/N15-LIM/blob/master/RunN15InverseRW.ipynb), [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/RunN15InverseRW.R)
 * A Modified MCMC Sampling Algorithm: [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/xsampleN15.r)
 * With these additional functions: [Notebook](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.ipynb), [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.R)
+
+---
+
+### Citation
+
+_Stukel M.R., Decima M., Kelly T.B._ A new approach for incorporating 15N isotopic data into linear inverse ecosystem models with Markov Chain Monte Carlo sampling. 
