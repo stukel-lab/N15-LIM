@@ -1,15 +1,15 @@
 # N15 LIM
 
-This project integrates N15 values into Linear Inverse Models for ecosystem modeling. Below are the actual scripts:
+This project integrates N15 values into Linear Inverse Models for ecosystem modeling. Below are the actual scripts, available in multiple formats. A major goal of this project is to facilitate the use of this tool within the oceanographic community. We welcome any questions or concerns, especially regarding how to get started with Linear Inverse Modeling.
 
 1. [N15 Setup File](https://github.com/tbrycekelly/N15-LIM/blob/master/SetMatricesN15RW.ipynb): Reads in the spreadsheets and prepares the matricies and vectors used in the LIM. Also loads results from the Forward model for use in the LIM.
 2. [Model Initialization Script](https://github.com/tbrycekelly/N15-LIM/blob/master/RunN15InverseRW.ipynb): Gets the run-time enviroment ready and handles all the bunr-in stages as well as the actual model runs. Saves all results at the end.
-3. [A Modified MCMC Sampling Algorithm](https://github.com/tbrycekelly/N15-LIM/blob/master/xsampleN15.r): Is called by the Model Initialization Script, not meant to be edited from one model to the next. Adapted from Van den Meersche's xsample script.
+3. [A Modified MCMC Sampling Algorithm](https://github.com/tbrycekelly/N15-LIM/blob/master/xsampleN15.r): Is called by the __Model Initialization Script__, not meant to be edited from one model to the next. Adapted from Van den Meersche's _xsample_ script.
 4. [With these additional functions](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.ipynb): Includes the function that updates the N15-related equations during the random walk. Also an ideal file for accessory functions.
 
 
 ---
-### Files
+### Multiple Formats
 
 In general, the user accessible scripts are available as with jupyter notebook files or as straight R code.
 
