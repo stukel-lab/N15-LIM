@@ -18,8 +18,13 @@ In general, the user accessible scripts are available as with jupyter notebook f
 * A Modified MCMC Sampling Algorithm: [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/xsampleN15.r)
 * With these additional functions: [Notebook](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.ipynb), [R code](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.R)
 
+
+### About Notebook Files
+
+Since not everyone is familiar with the Jupyter Notebook platform, let us say a few words about it. Jupyter, formally iPython Notebook, is an interactive scripting environment for use in data analysis, script development and, importanly, for sharing scripts and workflows with others. While designed with Python in mind, the platform is nearly language agnostic with ready backends (i.e. kernels) for numerous languages: R, MatLab, C, Java, Clojure, Lisp, Fortran, etc. Do yourself a favor and check it out, it is certainly worth the time to learn about this valuable, open source resource.
+
 ---
 
 ### Citation
 
-_Stukel M.R., Decima M., Kelly T.B._ A new approach for incorporating 15N isotopic data into linear inverse ecosystem models with Markov Chain Monte Carlo sampling. 
+Stukel M.R., Decima M., Kelly T.B. A new approach for incorporating 15N isotopic data into linear inverse ecosystem models with Markov Chain Monte Carlo sampling. 
