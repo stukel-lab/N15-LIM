@@ -6,7 +6,7 @@ This project integrates N15 values into Linear Inverse Models for ecosystem mode
 2. [Model Initialization Script](https://github.com/tbrycekelly/N15-LIM/blob/master/RunN15InverseRW.ipynb): Gets the run-time enviroment ready and handles all the bunr-in stages as well as the actual model runs. Saves all results at the end.
 3. [A Modified MCMC Sampling Algorithm](https://github.com/tbrycekelly/N15-LIM/blob/master/xsampleN15.r): Is called by the __Model Initialization Script__, not meant to be edited from one model to the next. Adapted from Van den Meersche's _xsample_ script.
 4. [With these additional functions](https://github.com/tbrycekelly/N15-LIM/blob/master/ExternalFunctions.ipynb): Includes the function that updates the N15-related equations during the random walk. Also an ideal file for accessory functions.
-
+5. A [full working demo](https://github.com/tbrycekelly/N15-LIM/blob/master/Demo/demo.md) is also included with both model input and output files.
 
 ---
 ### Multiple Formats
