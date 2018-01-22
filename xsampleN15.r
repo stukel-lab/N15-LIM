@@ -216,7 +216,7 @@ xsampleN15 <- function(A=NULL, B=NULL, E=NULL, F=NULL, G=NULL, H=NULL,
   lx <- length(x0)
   
   ## additional checks for equalities, hidden in inequalities... (Karline S.)
-  if (test & !is.null(G))   {
+  if (!is.null(test) & !is.null(G))   {
     xv <- varranges(E, F, G, H, EqA=G)
     ii <- which (xv[,1] - xv[,2] == 0)
     if (length(ii) > 0) { # if they exist: add regular equalities !
