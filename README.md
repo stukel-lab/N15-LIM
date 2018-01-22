@@ -25,6 +25,10 @@ Since not everyone is familiar with the Jupyter Notebook platform, let us say a 
 
 ---
 
-### Citation
+### Abstract & Citation
+
+__ABSTRACT__
+Oceanographic field programs often use δ15N biogeochemical measurements and in situ rate measurements to investigate nitrogen cycling and planktonic ecosystem structure. However, integrative modeling approaches capable of synthesizing these distinct measurement types are lacking. We develop a novel approach for incorporating δ15N isotopic data into existing Markov Chain Monte Carlo (MCMC) random walk methods for solving linear inverse ecosystem models. We test the ability of this approach to recover food web indices (nitrate uptake, nitrogen fixation, zooplankton trophic level, and secondary production) derived from forward models simulating the planktonic ecosystems of the California Current and Amazon River Plume. We show that the MCMC with δ15N approach typically does a better job of recovering ecosystem structure than the standard MCMC or L2 minimum norm (L2MN) approaches, and also outperforms an L2MN with δ15N approach.  Furthermore, we find that the MCMC with δ15N approach is robust to the removal of input equations and hence is well suited to typical pelagic ecosystem studies for which the system is usually vastly under-constrained. Our approach is easily extendable for use with δ13C isotopic measurements or variable carbon:nitrogen stoichiometry.
+
 
 Stukel M.R., Decima M., Kelly T.B. A new approach for incorporating 15N isotopic data into linear inverse ecosystem models with Markov Chain Monte Carlo sampling. 
